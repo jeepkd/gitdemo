@@ -84,12 +84,12 @@ class TestPredictionAPIV2(unittest.TestCase):
         assert 'updated_at' in result.data
         assert json.loads(result.data)['human_answer'] == 'test_label'
 
-        result = self._create_a_valid_prediction()
-        pred_id = json.loads(result.data).get('prediction_id')
-        img_url = 'https://test.domain/file.jpg'
-        data = {'img_url': img_url}
-        result = self._patch('api/v2/predictions/{}'.format(pred_id), data=data)
-        assert json.loads(result.data)['img_url'] == img_url
+        # result = self._create_a_valid_prediction()
+        # pred_id = json.loads(result.data).get('prediction_id')
+        # img_url = 'https://test.domain/file.jpg'
+        # data = {'img_url': img_url}
+        # result = self._patch('api/v2/predictions/{}'.format(pred_id), data=data)
+        # assert json.loads(result.data)['img_url'] == img_url
 
 
 if __name__ == '__main__':
