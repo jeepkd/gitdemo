@@ -12,9 +12,9 @@ class TestPredictionAPIV2(unittest.TestCase):
         # self.valid_img_url = 'http://placehold.it/299x299.jpg'
         # self.valid_predictor = 'nanameue'
 
-    def tearDown(self):
-        with self.app.app_context():
-            mongo.db.predictions.delete_many({})
+    def tearDown(self): # comment2
+        with self.app.app_context(): # comment2
+            mongo.db.predictions.delete_many({}) # comment2
 
     def _get(self, url):
         return self.client.get(url, headers=self.headers)
