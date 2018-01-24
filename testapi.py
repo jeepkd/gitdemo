@@ -6,11 +6,11 @@ from shared.database import mongo
 
 class TestPredictionAPIV2(unittest.TestCase):
     def setUp(self):
-        self.app = application.create_app(config_object='config.ConfigTesting')
-        self.client = self.app.test_client()
-        self.headers = {'Api-Key': self.app.config['API_KEY']}
-        self.valid_img_url = 'http://placehold.it/299x299.jpg'
-        self.valid_predictor = 'nanameue'
+        # self.app = application.create_app(config_object='config.ConfigTesting')
+        # self.client = self.app.test_client()
+        # self.headers = {'Api-Key': self.app.config['API_KEY']}
+        # self.valid_img_url = 'http://placehold.it/299x299.jpg'
+        # self.valid_predictor = 'nanameue'
 
     def tearDown(self):
         with self.app.app_context():
